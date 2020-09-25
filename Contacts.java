@@ -4,7 +4,7 @@ public class Contacts {
 
 	/*HashMap to store contacts, 
 	It maps Name -> Telephone Number */
-	public Map<String, Integer> contactsMap;
+	public Map<String, Long> contactsMap;
 
 	/*Trie to store all names in contacts for showing
 	suggestions while searching contacts */
@@ -24,7 +24,7 @@ public class Contacts {
      * This function adds the given contact to the hashmap
      * as well as adds given name to trie
      */
-    public void addContact(String name, int mobileNo){
+    public void addContact(String name, long mobileNo){
     	contactsMap.put(name, mobileNo);
     	trie.insert(name);
     }
@@ -35,7 +35,7 @@ public class Contacts {
      * @return int
      * Return -1 if contact is not present
      */
-    public int getContact(String name){
+    public long getContact(String name){
     	return contactsMap.get(name);
     }
 
@@ -52,9 +52,9 @@ public class Contacts {
     public static void main(String[] args) {
         
         Contacts contacts = new Contacts();
-        contacts.addContact("rohit", 969020);
-        contacts.addContact("rohan", 941000);
-        contacts.addContact("rajkumar", 967511);
+        contacts.addContact("rohit", 9825476841L);
+        contacts.addContact("rohan", 9874568452L);
+        contacts.addContact("rajkumar", 8547587456L);
 
         System.out.println("Rohit : "  + contacts.getContact("rohit"));
 

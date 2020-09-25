@@ -53,7 +53,7 @@ class Trie {
         }
 
         List<String> namesSearched = new LinkedList<>();
-        displayContactsUtil(current, query, namesSearched);
+        searchContactsUtils(current, query, namesSearched);
         return namesSearched;
     }
     
@@ -79,7 +79,7 @@ class Trie {
             TrieNode nextNode = currentNode.children.get(i);
 
             if (nextNode != null) { 
-                displayContactsUtil(nextNode, prefix + i, namesSearched); 
+                searchContactsUtils(nextNode, prefix + i, namesSearched); 
             } 
             
         } 
