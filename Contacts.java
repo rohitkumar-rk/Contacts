@@ -32,8 +32,7 @@ public class Contacts {
     /**
      * Returns the mobile number for given name
      * @param name Contact whose mobile no we need to return
-     * @return int
-     * Return -1 if contact is not present
+     * @return long
      */
     public long getContact(String name){
     	return contactsMap.get(name);
